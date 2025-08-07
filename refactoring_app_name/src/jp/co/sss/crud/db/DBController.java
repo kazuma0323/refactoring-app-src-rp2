@@ -49,9 +49,11 @@ public class DBController {
 			}
 
 			// レコードを出力
-			System.out.println("社員ID\t社員名\t性別\t生年月日\t部署名");
+			//修正箇所→社員名\t\t
+			//修正箇所→System.out.print(resultSet.getString("emp_id") + "\t\t");
+			System.out.println("社員ID\t社員名\t\t性別\t生年月日\t部署名");
 			while (resultSet.next()) {
-				System.out.print(resultSet.getString("emp_id") + "\t");
+				System.out.print(resultSet.getString("emp_id") + "\t\t");
 				System.out.print(resultSet.getString("emp_name") + "\t");
 
 				int gender = Integer.parseInt(resultSet.getString("gender"));
@@ -121,9 +123,9 @@ public class DBController {
 				return;
 			}
 
-			System.out.println("社員ID\t社員名\t性別\t生年月日\t部署名");
+			System.out.println("社員ID\t社員名\t\t性別\t生年月日\t部署名");
 			while (resultSet.next()) {
-				System.out.print(resultSet.getString("emp_id"));
+				System.out.print(resultSet.getString("emp_id")+"\t");
 				System.out.print("\t");
 
 				System.out.print(resultSet.getString("emp_name"));
@@ -197,7 +199,7 @@ public class DBController {
 				return;
 			}
 
-			System.out.println("社員ID\t社員名\t性別\t生年月日\t部署名");
+			System.out.println("社員ID\t社員名\t\t性別\t生年月日\t部署名");
 			while (resultSet.next()) {
 				System.out.print(resultSet.getString("emp_id"));
 				System.out.print("\t");
