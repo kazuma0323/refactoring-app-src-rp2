@@ -66,9 +66,12 @@ public class MainSystem {
 			case 3:
 				// 検索する部署IDを入力
 				System.out.print("部署ID(1:営業部、2:経理部、3:総務部)を入力してください:");
-				String deptIdA = br.readLine();
-				menuNo = Integer.parseInt(deptIdA);
-
+				String deptIdstr = br.readLine();
+				
+				int deptIdA;
+				deptIdA = Integer.parseInt(deptIdstr);
+				
+				
 				// 検索機能の呼出
 				DBController.findC(deptIdA);
 				break;
